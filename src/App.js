@@ -1,12 +1,10 @@
 import React from "react";
-import { Card } from "./components/UI/Card";
+import { Main } from "./layouts/Main";
 
 export const App = () => {
   return (
     <div>
-      <Card />
+      <Main />
     </div>
   );
 };
-
-
