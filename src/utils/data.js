@@ -37,4 +37,16 @@ export const CARDS = [
     isFound: false,
     index: 5,
   },
+  {
+    icon: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffutballnews.com%2Fwp-content%2Fuploads%2F2020%2F07%2FMBAPPE-SMILE.jpg&f=1&nofb=1&ipt=19042aefafd3e30df2b6d23d61a7311652a67b96666545877fb94b0f1317f48f&ipo=images",
+    isActive: false,
+    isFound: false,
+    index: 6,
+  },
+  {
+    icon: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffutballnews.com%2Fwp-content%2Fuploads%2F2020%2F07%2FMBAPPE-SMILE.jpg&f=1&nofb=1&ipt=19042aefafd3e30df2b6d23d61a7311652a67b96666545877fb94b0f1317f48f&ipo=images",
+    isActive: false,
+    isFound: false,
+    index: 7,
+  },
 ];

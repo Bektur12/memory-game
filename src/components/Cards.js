@@ -10,7 +10,8 @@ export const Cards = () => {
     isActive: "",
   };
   const [cards, setCards] = useState(CARDS);
-  console.log(cards, "cccc");
+  const [count, setCount] = useState({ attempts: 0, correct: 0 });
+
   const [selectedCards, setSelectedCards] = useState({
     first: initialState && null,
     second: initialState && null,
@@ -45,13 +46,21 @@ export const Cards = () => {
 
           newCards[secondOfIndex].isActive = false;
           newCards[secondOfIndex].isFound = true;
+          setCount({
+            attempts: count.attempts + 1,
+            correct: count.correct + 1,
+          });
+
+          if (count.correct + 1 === 4) {
+            return alert("Все правильно");
+          }
         }
-        setSelectedCards({ first: null, second: null });
         setCards(newCards);
+        setSelectedCards({ first: null, second: null });
         newCards[firstOfIndex].isActive = false;
         newCards[secondOfIndex].isActive = false;
       }
-    }, 800);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [cards, selectedCards]);
 
@@ -70,6 +79,14 @@ export const Cards = () => {
 };
 
 const CardsContainer = styled.div`
-  display: flex;
+  width: 590px;
+  height: 590px;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
   gap: 30px;
+  background-color: bisque;
 `;

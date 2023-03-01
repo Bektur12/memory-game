@@ -12,7 +12,7 @@ export const Main = () => {
 };
 
 const CenterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 620px;
+  text-align: center;
+  margin: auto;
 `;
